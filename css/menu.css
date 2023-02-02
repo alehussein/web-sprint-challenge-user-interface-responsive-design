@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/* border: 1px solid; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -49,6 +49,8 @@ table {
 
 * {
     box-sizing: border-box;
+    text-decoration: none;
+    color: white;
 }
 
 html {
@@ -94,8 +96,32 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
+header .fondo{
+    background-color: hsla(0, 3%, 7%, 0.876);
+    
+}
+
+header nav{
+    height: 155px;
+    /* background-color: blueviolet; */
+}
+header nav .links{
+    padding: 1%;
+    /* background-color: aquamarine; */
+}
+header nav a{
+    margin: 6%;
+    /* background-color: bisque; */
+}
+.social{
+    align-items: center;
+    width: 400px;
+    margin-left: 38%;
+    /* background-color: blue; */
+}
 /* spacer */
 .spacer {
     width: 100%;
@@ -110,6 +136,7 @@ header {
 
 /* menu */
 
+
 .menu {
     width: 100%;
     height: auto;
@@ -118,7 +145,45 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+     
 }
+.menu h2{
+    background-color: rgba(10, 10, 10, 0.655);
+  color: white;
+  text-align: center;
+}
+.menu h3{
+  /* background-color: blue; */
+  width: 100%;
+}
+
+.menu-container{
+  background-color: rgba(10, 10, 10, 0.655);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.menu-section{
+  width: 40%;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.menu-item{
+/*   width: 337px; */
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+}
+h4{
+  /* background-color: #f467ce; */
+  width: 50%;
+ }
+
 
 /* footer section */
 footer {
@@ -126,27 +191,118 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer nav{
+    width: 60%;
+    
+    /* background-color: blue; */
+    }
+
+footer nav a{
+    margin: 3%;
+    }
+
+
+footer .email{
+   text-align: center;
+   width: 40%;
+   font-size: 35px;
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    .header-title {
+    /* .header-title {
         width: 75%;
         margin: 0 auto;
         text-align: center;
         font-size: 4rem;
+    } */
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+     }
+    
+    header nav{
+    display: flex;
+    flex-direction: column;
+    
+     }
+    header nav .links a{
+    display: flex;
+    flex-direction: column;
+     }
+    header nav .social a{
+    display: flex;
+    flex-direction: column;
     }
 
     /* menu */
     .menu {
         background-image: none;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        
     }
-
+    .menu-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-item{
+        /*   width: 337px; */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        h2{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
     /* footer section */
     footer {
+        display: flex;
+        flex-direction: column;
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
-    }
+        }
+    footer .email{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            width: auto;
+             }
+    footer nav{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            }
+     footer nav a{
+            margin: 3%;
+            text-align: center;
+            }
+     .copyright{
+        text-align: center;
+     }      
+        
 }
